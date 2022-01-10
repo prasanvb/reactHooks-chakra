@@ -1,28 +1,41 @@
-import React, { useEffect, useState } from 'react'
-import { Text, Container } from '@chakra-ui/react';
+import React, { useEffect, useState } from "react";
+import { Text, Container } from "@chakra-ui/react";
 
 const UseeffectRunOnlyOnce = () => {
-
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
   const logPosition = (e) => {
-    console.log("Mouse Event will always run as you move the mouse");
+    console.log(
+      `Mouse Event executed on moving the mouse ${e.clientX} - ${e.clientY}`
+    );
     setX(e.clientX);
     setY(e.clientY);
-  }
+  };
 
-  useEffect(()=> {
+  // In React, the `window` object is only accessible inside the UseEffect Hook.
+  // console.log(window.location.pathname);
+
+  useEffect(() => {
     console.log("useEffect IS RUN ONLY ONCE");
-    window.addEventListener('mousemove', logPosition)
-  },[])
+    console.log("pathname = " + window.location.pathname);
+    window.addEventListener("mousemove", logPosition);
+  }, []);
 
   return (
     <Container m={5} p={5}>
-      <Text fontSize={24} textDecoration="underline">UseEffect Conditional Run</Text>
+      <Text fontSize={24} textDecoration="underline">
+        UseEffect Conditional Run
+      </Text>
       X - {x}, Y - {y}
+      <Text>
+        Notes: - Event Listener is added to window object through the useEffect
+        hook - Check the console for co-ordinates - Now try clicking back button
+        in the browser - Despite the changing the page you can still see the
+        co-ordinates being logged
+      </Text>
     </Container>
-  )
-}
+  );
+};
 
 export default UseeffectRunOnlyOnce;
