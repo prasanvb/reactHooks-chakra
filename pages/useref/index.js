@@ -8,7 +8,6 @@ const UseRefHook = () => {
       <Container>
         <Text fontSize={24}>useRef Hook Example</Text>
       </Container>
-
       <ul>
         <li>
           <Link href="useref/1-access-dom-nodes">
