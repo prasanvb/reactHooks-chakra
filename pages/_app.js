@@ -8,9 +8,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <ChakraProvider>
         <Container m={2}>
-          <Text fontSize={24}>
+          <Text fontSize={24} fontWeight="bold">
             <Link href="/" passHref>
-              <a>HOME</a>
+              <a>React Hooks</a>
             </Link>
           </Text>
           <Component {...pageProps} />

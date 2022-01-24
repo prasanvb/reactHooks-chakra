@@ -1,29 +1,20 @@
 import Link from "next/link";
 import { Container } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 import { Text } from "@chakra-ui/react";
 
 export default function Home() {
-  const [details, setDetails] = useState(null);
-
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setDetails(data));
-  }, []);
-  console.log(details);
-
   return (
     <Container m={4}>
-      <Text fontSize={24}>{details?.name}</Text>
       <div>
         <Link href="/usestate" passHref>
           <Text fontSize={18} textDecoration="underline">
-            UseState Hook
+            <a>UseState Hook</a>
           </Text>
         </Link>
         <Link href="/usestate" passHref>
-          <li>useState Examples</li>
+          <li>
+            <a>useState Examples</a>
+          </li>
         </Link>
       </div>
       <div>
