@@ -24,7 +24,7 @@ const UsestateHook = () => {
   return (
     <Container m={5} p={5}>
       <Text fontSize={20} textDecoration="underline">
-        useState Hook Example 1
+        useState Hook Example - 1
       </Text>
       <p>Counter = {counter}</p>
       <Button onClick={onIncrement} m={2}>

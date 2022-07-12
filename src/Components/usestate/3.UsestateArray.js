@@ -21,7 +21,7 @@ const UsestateArray = () => {
   return (
     <Container m={5} p={5}>
       <Text fontSize={20} textDecoration="underline">
-        useState Array Example 3
+        useState Array Example - 3
       </Text>
       <Container m={5} p={5} border="1px" borderColor="grey">
         {fruitsArray.map((item, index) => (

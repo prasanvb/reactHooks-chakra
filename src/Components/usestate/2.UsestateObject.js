@@ -17,7 +17,7 @@ const UsestateObject = () => {
   return (
     <Container m={5} p={5}>
       <Text fontSize={20} textDecoration="underline">
-        useState Object Example 2
+        useState Object Example - 2
       </Text>
       <form>
         <Input
