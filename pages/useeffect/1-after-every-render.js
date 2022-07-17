@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const UseEffectAfterEveryRender = () => {
   const [counter, setCounter] = useState(0);
-  const [name, setName] = useState("");
+  const [name, setName] = useState();
 
   // In React, the `document` object is only accessible inside the UseEffect Hook.
   // comment out the useEffect hook and try removing the comment below and do a page refresh
