@@ -4,12 +4,12 @@ import { Button, Input, Text, Container } from "@chakra-ui/react";
 const UseeffectDataFetchingOnSubmit = () => {
   const [post, setPost] = useState({});
   const [id, setId] = useState(0);
-  const [isButtonClicked, setButtonClicked] = useState(0);
+  const [postId, setPostID] = useState(0);
 
   useEffect(() => {
-    if (isButtonClicked !== "") {
-      if (isButtonClicked > 0 && isButtonClicked < 101) {
-        fetch(`https://jsonplaceholder.typicode.com/posts/${isButtonClicked}`)
+    if (postId !== "") {
+      if (postId > 0 && postId < 101) {
+        fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
           .then((res) => res.json())
           .then((data) => setPost(data));
       } else {
@@ -18,10 +18,10 @@ const UseeffectDataFetchingOnSubmit = () => {
     } else {
       setPost("");
     }
-  }, [isButtonClicked]);
+  }, [postId]);
 
   const onSubmit = () => {
-    setButtonClicked(id);
+    setPostID(id);
   };
 
   return (
