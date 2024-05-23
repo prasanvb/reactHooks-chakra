@@ -11,15 +11,11 @@ const UseeffectDataFetchingOnEnter = () => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
           .then((res) => res.json())
           .then((data) => setPost(data));
-      } else {
-        setPost("");
-      }
-    } else {
-      setPost("");
+      } 
     }
   }, [id]);
 
-  console.log(post);
+  console.log({post});
 
   return (
     <Container p={5} m={5}>

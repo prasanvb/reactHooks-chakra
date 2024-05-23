@@ -12,13 +12,11 @@ const UseeffectDataFetchingOnSubmit = () => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
           .then((res) => res.json())
           .then((data) => setPost(data));
-      } else {
-        setPost("");
       }
-    } else {
-      setPost("");
     }
   }, [postId]);
+
+  console.log({postId});
 
   const onSubmit = () => {
     setPostID(id);
