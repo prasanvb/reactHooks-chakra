@@ -5,9 +5,7 @@ import React, { useState } from "react";
 const UsestateArray = () => {
   const initial = ["apple", "banana", "orange", "pom"];
   const [fruitsArray] = useState(initial);
-
   const [itemsArray, setItemsArray] = useState([]);
-
   const addItemsToArray = () => {
     setItemsArray((old) => {
       return [
