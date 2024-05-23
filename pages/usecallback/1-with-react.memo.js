@@ -1,3 +1,7 @@
+// By default, Every time the state changes in the Parent component, the Parent component re-renders,
+// the ChildComponent will also re-render, even though its props haven't changed.
+// React.memo enables your component to avoid re-rendering when its parent re-renders, provided the child’s props remain unchanged.
+
 import React, { useState } from "react";
 import { Container, Text } from "@chakra-ui/react";
 import Title from "../../src/Components/usecallback/Title";

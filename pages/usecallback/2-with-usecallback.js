@@ -15,13 +15,15 @@ const ExampleWithUseCallback = () => {
     setAge((age) => age + 1);
   }, [age]); 
   //"age" : try removing the value in the dependency array
-  console.log(incrementAge);
+  
+  console.log({incrementAge});
 
   const incrementCompensation = useCallback(() => {
     console.log("incrementCompensation useCallback function");
     setCompensation((old) => old + 5000);
   }, []); // "compensation" : try adding the value in the dependency array
-  console.log(incrementCompensation);
+
+  console.log({incrementCompensation});
 
   return (
     <Container p={5} m={5}>
