@@ -1,6 +1,6 @@
-import React from 'react'
-import { Container } from '@chakra-ui/layout';
-import ComponentB from '../../Components/usecontext/ComponentB'
+import React from "react";
+import { Container } from "@chakra-ui/layout";
+import ComponentB from "../../Components/usecontext/ComponentB";
 
 const ComponentA = () => {
   return (
@@ -8,7 +8,7 @@ const ComponentA = () => {
       ComponentA
       <ComponentB></ComponentB>
     </Container>
-  )
-}
+  );
+};
 
 export default ComponentA;

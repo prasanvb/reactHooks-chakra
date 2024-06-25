@@ -15,9 +15,11 @@ const Index = () => {
       .then((data) => setAuthDetails(data));
   }, []);
 
+  console.log(authDetails);
+
   return (
     <div>
-      <userAuthDetails.Provider value={authDetails}>
+      <userAuthDetails.Provider value={[authDetails, setAuthDetails]}>
         <userName.Provider value={"Prasan Venkat"}>
           <Container p={5} m={5} border="1px solid" borderColor="blue">
             <Text fontSize={24} textDecoration="underline">
