@@ -5,12 +5,10 @@ const Title = () => {
   console.log("Title is rendered");
   return (
     <div>
-      <Text fontSize={20} textDecoration="underline">
-        {" "}
-        Example with React.Memo
-      </Text>
+      Title - Example with React.Memo
+      <Text fontSize={20} textDecoration="underline"></Text>
     </div>
   );
 };
 
-export default React.memo(Title);
+export default Title;

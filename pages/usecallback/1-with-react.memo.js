@@ -3,7 +3,7 @@
 // React.memo enables your component to avoid re-rendering when its parent re-renders, provided the child’s props remain unchanged.
 
 import React, { useState } from "react";
-import { Container, Text } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import Title from "../../src/Components/usecallback/Title";
 import DataCounter from "../../src/Components/usecallback/DataCounter";
 import Action from "../../src/Components/usecallback/Action";

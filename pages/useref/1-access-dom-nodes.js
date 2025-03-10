@@ -5,10 +5,10 @@ const AccessDOMNodesWithUseRef = () => {
   const firstnameInputRef = useRef(null);
   const emailInputRef = useRef();
 
-  // useRef is like a “box” that can hold a mutable value in its .current property.
-  // NOTE: Check the console to see what useRef returns initially before the component is initially rendered
+  // useRef is like a “box” that can hold a mutable value in its "current" property.
+  // NOTE: Check the console to see what useRef initial value during initially render
   // (i.e. before the return of the component is executed)
-  console.log("Before Initial Render:");
+  console.log("Initial Render:");
   console.log({ firstnameInputRef, emailInputRef });
 
   useEffect(() => {
@@ -28,27 +28,10 @@ const AccessDOMNodesWithUseRef = () => {
       <Text fontSize={20} textDecoration="underline">
         Imperatively Access DOM Nodes With useRef Hook
       </Text>
-      <Text fontSize={15}>
-        useRef is like a “box” that can hold a mutable value in its ”.current”
-        property.
-      </Text>
-      <Input
-        id="firstname"
-        ref={firstnameInputRef}
-        name="firstname"
-        placeholder="Enter you First Name"
-      ></Input>
-      <Input
-        id="lastname"
-        name="lastname"
-        placeholder="Enter you Last Name"
-      ></Input>
-      <Input
-        id="email"
-        ref={emailInputRef}
-        name="email"
-        placeholder="Enter you Email"
-      ></Input>
+      <Text fontSize={15}>useRef is like a “box” that can hold a mutable value in its ”.current” property.</Text>
+      <Input id="firstname" ref={firstnameInputRef} name="firstname" placeholder="Enter you First Name" />
+      <Input id="lastname" name="lastname" placeholder="Enter you Last Name" />
+      <Input id="email" ref={emailInputRef} name="email" placeholder="Enter you Email" />
       <Button onClick={() => emailFocus()}>Focus on Email Input</Button>
     </Container>
   );

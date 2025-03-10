@@ -10,25 +10,22 @@ const AccessMutableObjectWithUseRef = () => {
       setCountTimer((old) => old + 1);
     }, 1000);
 
+    console.log("useEffect", countTimerRef);
     return () => {
       clearInterval(countTimerRef.current);
     };
   }, []);
 
+  console.log(countTimerRef);
+
   return (
     <Container m={5} p={5}>
       <Text fontSize={20} textDecoration="underline">
-        {" "}
         Access Mutable Objects With useRef Hook
       </Text>
-      <Text fontSize={15}>
-        useRef is like a “box” that can hold a mutable value in its ”.current”
-        property.
-      </Text>
+      <Text fontSize={15}>useRef is like a “box” that can hold a mutable value in its ”.current” property.</Text>
       <p> countTimer = {countTimer} </p>
-      <Button onClick={() => clearInterval(countTimerRef.current)}>
-        Clear Timer
-      </Button>
+      <Button onClick={() => clearInterval(countTimerRef.current)}>Clear Timer</Button>
     </Container>
   );
 };
