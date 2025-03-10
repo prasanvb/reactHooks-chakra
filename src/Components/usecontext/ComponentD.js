@@ -20,8 +20,8 @@ const ComponentD = () => {
   return (
     <Container p={5} m={5} border="1px solid" borderColor="green">
       ComponentD
-      <div>{`Parent Component - User ID: ${authDetails?.userId}`}</div>
-      <div>{`Logged in status: ${authDetails?.isLoggedIn}`}</div>
+      <div>{authDetails?.isLoggedIn && `Parent Component - User ID: ${authDetails?.userId}`}</div>
+      <div>{authDetails?.isLoggedIn && `Logged in status: ${authDetails?.isLoggedIn}`}</div>
       <Button onClick={toggleLogInStatus}>Toggle Log In Status</Button>
     </Container>
   );

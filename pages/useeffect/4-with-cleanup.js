@@ -12,11 +12,9 @@ const UseeffectWithCleanup = () => {
           UseEffect With Cleanup
         </Text>
         <Text>
-          IMPORTANT NOTE: When Toggle the HookMouse Component is
-          unmounted/mounted. Check inside the `HookMouse` component for the
-          cleanup function. If you directly use the `HookMouse` logic with in
-          the `UseeffectWithCleanup` then you can`t see the component did
-          unmount part, i.e. because both have be in different components.
+          IMPORTANT NOTE: When you Toggle (i.e. based on the useState condition logic true/false) the HookMouse
+          Component is unmounted/mounted. Even on pressing the back button the page component get unmounted which inturn
+          unmounts all child Components (i.e. HookMouse Component)
         </Text>
       </div>
       <Text p={5}>Toggle Display Value = {display.toString()}</Text>
