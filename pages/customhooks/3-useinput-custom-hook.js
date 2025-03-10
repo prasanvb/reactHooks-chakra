@@ -10,14 +10,22 @@ const UseInputCustomHook = () => {
   const [lastname, bindLastname, resetLastname] = useInput("");
 
   const onSubmitHandler = (e) => {
+    e.preventDefault();
     console.log({ e });
     resetFirstname();
     resetLastname();
-    console.log({
-      firstname: firstInputRef.current.value,
-      lastname: lastInputRef.current.value,
-    });
   };
+
+  // NOTE: useRef is just used for viewing the current value prop,
+  // everything will perfectly work even without useRef
+  console.log({
+    firstname: firstInputRef?.current?.value,
+    lastname: lastInputRef?.current?.value,
+  });
+
+  //  NOTE: spreads operator adds these attributes to "{value: '', onChange: ƒ}" input
+  console.log("bindFirstname", { ...bindFirstname });
+  console.log("bindLastname", { ...bindLastname });
 
   return (
     <Container p={5} m={5}>
